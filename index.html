@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai | Software Engineer</title>
+    <meta name="description" content="Portfolio of Sai, Software Engineer at Meta.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="logo">Sai<span class="accent">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about"><span class="mono-text">01.</span> About</a></li>
+                <li><a href="#experience"><span class="mono-text">02.</span> Experience</a></li>
+                <li><a href="#education"><span class="mono-text">03.</span> Education</a></li>
+                <li><a href="#skills"><span class="mono-text">04.</span> Skills</a></li>
+            </ul>
+            <button class="cmd-k-btn" id="cmdKBtn" title="Command Menu">
+                <i class="fa-solid fa-terminal"></i> <span>Cmd K</span>
+            </button>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Command Menu Modal -->
+    <div class="cmd-modal" id="cmdModal">
+        <div class="cmd-backdrop"></div>
+        <div class="cmd-dialog">
+            <div class="cmd-header">
+                <input type="text" id="cmdInput" placeholder="Type a command or search..." autocomplete="off">
+            </div>
+            <ul class="cmd-results" id="cmdResults">
+                <li class="cmd-item" data-action="scroll" data-target="#about"><i class="fa-solid fa-user"></i> Go to About</li>
+                <li class="cmd-item" data-action="scroll" data-target="#experience"><i class="fa-solid fa-briefcase"></i> Go to Experience</li>
+                <li class="cmd-item" data-action="scroll" data-target="#education"><i class="fa-solid fa-graduation-cap"></i> Go to Education</li>
+                <li class="cmd-item" data-action="scroll" data-target="#skills"><i class="fa-solid fa-code"></i> Go to Skills</li>
+                <li class="cmd-item" data-action="link" data-url="mailto:sainikhitgulla@gmail.com"><i class="fa-solid fa-envelope"></i> Send Email</li>
+                <li class="cmd-item" data-action="link" data-url="https://github.com/gsnsg"><i class="fa-brands fa-github"></i> Open GitHub</li>
+                <li class="cmd-item" data-action="link" data-url="https://linkedin.com/in/nikhitsai"><i class="fa-brands fa-linkedin"></i> Open LinkedIn</li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <section id="hero" class="hero section">
+            <div class="hero-content reveal-hero">
+                <p class="mono-text accent">Hi, my name is</p>
+                <h1 class="glitch" data-text="Sai.">Sai.</h1>
+                <h2 class="subtitle">I build systems that scale.</h2>
+                <p class="desc">
+                    I'm a software engineer specializing in building exceptional digital experiences. Currently, I'm optimizing configuration pipelines and system performance at <strong class="accent">Meta</strong>.
+                </p>
+                <div class="hero-cta">
+                    <a href="#experience" class="btn btn-primary">Check out my experience!</a>
+                    <a href="mailto:sainikhitgulla@gmail.com" class="btn btn-outline">Let's Connect</a>
+                </div>
+            </div>
+            
+            <div class="social-sidebar reveal-delay">
+                <a href="https://github.com/gsnsg" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/nikhitsai" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <div class="line"></div>
+            </div>
+            <div class="email-sidebar reveal-delay">
+                <a href="mailto:sainikhitgulla@gmail.com">sainikhitgulla@gmail.com</a>
+                <div class="line"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about section reveal">
+            <div class="section-heading">
+                <span class="mono-text accent">01.</span>
+                <h2>About Me</h2>
+                <div class="heading-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! My name is Sai, and I enjoy creating things that live on the internet. My interest in software engineering started back in 2021 when I decided to try building mobile iOS applications — turns out hacking together custom UI components taught me a lot about architecture and user experience!</p>
+                    <p>Fast-forward to today, and I've had the privilege of working at an <span class="accent">advertising tech hub (Meta)</span>, a <span class="accent">cloud data platform (Snowflake)</span>, a <span class="accent">massive e-commerce corporation (Amazon)</span>, and a <span class="accent">major entertainment conglomerate (Disney)</span>. My main focus these days is building robust infrastructure, optimizing performance, and ensuring highly available distributed systems.</p>
+                    <p>When I'm not at my computer, I'm exploring new technologies or enjoying a good book.</p>
+                </div>
+                <div class="about-pic">
+                    <div class="pic-wrapper">
+                        <div class="pic-placeholder">
+                            <span class="mono-text">SAI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience section reveal">
+            <div class="section-heading">
+                <span class="mono-text accent">02.</span>
+                <h2>Where I've Worked</h2>
+                <div class="heading-line"></div>
+            </div>
+            <div class="jobs-container">
+                <!-- Job Tabs Navigation -->
+                <div class="job-tabs">
+                    <button class="job-btn active" data-job="meta">Meta</button>
+                    <button class="job-btn" data-job="snowflake">Snowflake</button>
+                    <button class="job-btn" data-job="amazon">Amazon</button>
+                    <button class="job-btn" data-job="disney">Disney</button>
+                    <button class="job-btn" data-job="mutualmobile">Mutual Mobile</button>
+                </div>
+
+                <!-- Job Panels -->
+                <div class="job-panels">
+                    <div class="job-panel active" id="meta">
+                        <h3>Software Engineer <span class="accent">@ Meta</span></h3>
+                        <p class="job-range mono-text">May 2024 - Present</p>
+                        <ul class="job-details">
+                            <li>Automated push pipelines for dynamic ads infra, driving large scale availability gains.</li>
+                            <li>Optimized jemalloc configurations, reducing CPU cycles and boosting ad ranking throughput.</li>
+                            <li>Enhanced test coverage and drove major code quality improvements system-wide.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-panel" id="snowflake">
+                        <h3>Software Engineer Intern <span class="accent">@ Snowflake</span></h3>
+                        <p class="job-range mono-text">January 2024 - April 2024</p>
+                        <ul class="job-details">
+                            <li>Resolved critical bugs in Go lang production binaries to stabilize workflows.</li>
+                            <li>Migrated core infrastructure dashboards to Grafana with advanced PromQL queries.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-panel" id="amazon">
+                        <h3>Software Engineer Intern <span class="accent">@ Amazon</span></h3>
+                        <p class="job-range mono-text">May 2023 - August 2023</p>
+                        <ul class="job-details">
+                            <li>Built an ultra-low latency real-time backend service for Kindle reading events in Java.</li>
+                            <li>Architected resilient AWS serverless infrastructure topologies using TypeScript CDK.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-panel" id="disney">
+                        <h3>Software Engineer <span class="accent">@ Disney</span></h3>
+                        <p class="job-range mono-text">August 2021 - April 2022</p>
+                        <ul class="job-details">
+                            <li>Led SDK-to-backend migrations on iOS/tvOS to resolve cross-device data synchronization.</li>
+                            <li>Delivered highly reusable, VIPER-RSA compliant customized UIKit components.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job-panel" id="mutualmobile">
+                        <h3>iOS Developer Intern <span class="accent">@ Mutual Mobile</span></h3>
+                        <p class="job-range mono-text">March 2021 - June 2021</p>
+                        <ul class="job-details">
+                            <li>Prototyped and shipped fluid SwiftUI user interfaces for early-stage mobile apps.</li>
+                            <li>Integrated third-party APIs into consumer iOS applications.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="education section reveal">
+            <div class="section-heading">
+                <span class="mono-text accent">03.</span>
+                <h2>Education</h2>
+                <div class="heading-line"></div>
+            </div>
+            <div class="edu-card">
+                <div class="edu-header">
+                    <h3>Arizona State University</h3>
+                    <span class="mono-text accent">August 2022 - May 2024</span>
+                </div>
+                <p class="edu-degree">Master's in Computer Science</p>
+                <p class="edu-gpa">GPA: <span class="accent">4.0/4.0</span></p>
+            </div>
+        </section>
+
+        <section id="skills" class="skills section reveal">
+            <div class="section-heading">
+                <span class="mono-text accent">04.</span>
+                <h2>Technical Toolbox</h2>
+                <div class="heading-line"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Languages</h3>
+                    <ul class="skill-list">
+                        <li>Java <span>&bull;</span> Swift <span>&bull;</span> Go <span>&bull;</span> Python</li>
+                        <li>C/C++ <span>&bull;</span> TypeScript</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="category-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Frameworks</h3>
+                    <ul class="skill-list">
+                        <li>UIKit & SwiftUI <span>&bull;</span> Combine & CoreData</li>
+                        <li>Flask <span>&bull;</span> PyTorch & TF <span>&bull;</span> Dagger & Thrift</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-icon"><i class="fa-solid fa-database"></i></div>
+                    <h3>Databases & Cloud</h3>
+                    <ul class="skill-list">
+                        <li>SQL & PostgreSQL <span>&bull;</span> Redis <span>&bull;</span> DynamoDB</li>
+                        <li>AWS (S3, Lambda, EC2) <span>&bull;</span> Docker</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="category-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>Core Skills</h3>
+                    <ul class="skill-list">
+                        <li>Distributed Systems <span>&bull;</span> Microservices <span>&bull;</span> System Design</li>
+                        <li>Data Structures <span>&bull;</span> Design Patterns</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content reveal">
+            <h2>Get In Touch</h2>
+            <p>I'm currently looking for new opportunities, and my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+            <a href="mailto:sainikhitgulla@gmail.com" class="btn btn-outline footer-btn">Say Hello</a>
+            
+            <div class="footer-text">
+                <a href="https://github.com/gsnsg" target="_blank" class="mono-text">
+                    <i class="fa-solid fa-code-branch"></i> Built by Sai
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
