@@ -562,21 +562,30 @@ main {
 
 .skill-list {
     list-style: none;
-    color: var(--text-secondary);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 0;
 }
 
 .skill-list li {
-    margin-bottom: 12px;
+    background: var(--bg-lighter);
+    color: var(--text-main);
+    padding: 8px 16px;
+    border-radius: 20px;
     font-family: var(--font-mono);
-    font-size: 0.95rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+    font-size: 0.85rem;
+    transition: var(--transition);
+    cursor: default;
 }
 
-.skill-list li span {
-    color: var(--bg-lighter);
+.skill-list li:hover {
+    background: var(--accent);
+    color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
 }
 
 /* Footer */
